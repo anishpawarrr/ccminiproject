@@ -1,0 +1,5 @@
+streamlit
+farm-haystack
+PyPDF2
+nltk
+torch
