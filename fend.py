@@ -7,7 +7,9 @@ from json import loads, dumps
 import streamlit as st
 from PyPDF2 import PdfReader
 from io import BytesIO
-st.session_state['HF_TOKEN'] = "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"
+from huggingface_hub import login
+st.session_state['HF_TOKEN'] = "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"
+
 
 st.header("Talk with PDF")
 st.write('---')
@@ -24,6 +26,7 @@ if uploaded_file is not None:
     st.session_state['notrerun'] = True
 
 if st.session_state['is_uploaded'] and st.session_state['notrerun']:
+    login(token = st.session_state['HF_TOKEN'])
     uploaded_file_io = BytesIO(uploaded_file.read())
     st.session_state['notrerun'] = False
 
