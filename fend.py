@@ -8,7 +8,7 @@ import streamlit as st
 from PyPDF2 import PdfReader
 from io import BytesIO
 from huggingface_hub import login
-st.session_state['HF_TOKEN'] = "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"
+st.session_state['HF_TOKEN'] = "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"
 
 
 st.header("Talk with PDF")
